@@ -8,6 +8,22 @@
 #include <ctype.h>
 #include <pthread.h>
 
+int contador;
+
+//Estructura necesaria para acceso excluyente
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
+
+typedef struct{
+	int socket;
+}Usuario;
+
+typedef struct{
+	Usuario usuario[40];
+	int num;
+}ListaUsuarios;
+
+ListaUsuarios UsuariosConectados;
 
 
 void *AtenderCliente (void *socket)
@@ -41,7 +57,7 @@ void *AtenderCliente (void *socket)
 		int codigo =  atoi (p);
 		char nombre[20];
 		
-		if (codigo !=0)
+		if ((codigo !=0) && (codigo !=6))
 		{
 			p = strtok( NULL, "/");
 			strcpy (nombre, p);
@@ -54,7 +70,10 @@ void *AtenderCliente (void *socket)
 		}
 		
 		else if (codigo ==1) //piden la longitd del nombre
-			sprintf (respuesta,"%d", strlen(nombre));
+		{
+			int longitud = strlen(nombre);
+			sprintf (respuesta,"%d", longitud);
+		}
 		
 		else if (codigo ==2 )
 		{
@@ -107,12 +126,29 @@ void *AtenderCliente (void *socket)
 			sprintf(respuesta,"%s",NombreMayusculas);
 		}
 		
+		else if(codigo == 6)
+		{
+			sprintf (respuesta, "%d", contador);
+			
+		}
+		
+		if ((codigo == 1)||(codigo == 2)||(codigo == 3)||(codigo == 4)||(codigo == 5))
+		{
+			pthread_mutex_lock( &mutex ); //No me interrumpe ahora
+			contador = contador + 1;
+			pthread_mutex_unlock( &mutex ); //ya puedes interrumpir
+		}
+		
 		if (codigo!=0)
 		{
 			printf ("Respuesta: %s\n", respuesta);
 			// Y lo enviamos
 			write (sock_conn,respuesta, strlen(respuesta));
 		}
+			
+		
+	
+		
 	}
 	close(sock_conn);
 	printf("Conexion cerrada\n");
@@ -121,6 +157,8 @@ void *AtenderCliente (void *socket)
 
 int main(int argc, char *argv[])
 {
+	UsuariosConectados.num=0;
+	contador=0;
 	int sock_conn, sock_listen, ret;
 	struct sockaddr_in serv_adr;
 	
@@ -146,7 +184,6 @@ int main(int argc, char *argv[])
 		printf("Error en el Listen");
 	
 	int i;
-	int sockets[100];
 	pthread_t thread[100];
 	i=0;
 	for(;;){
@@ -154,11 +191,12 @@ int main(int argc, char *argv[])
 		
 		sock_conn = accept(sock_listen, NULL, NULL);
 		printf ("He recibido conexi?n\n");
-		sockets[i] =sock_conn;
+		UsuariosConectados.usuario[i].socket=sock_conn;
 		//sock_conn es el socket que usaremos para este cliente
 				
 		// Crear thead y decirle lo que tiene que hacer		
-		pthread_create (&thread[i], NULL, AtenderCliente,&sockets[i]);
+		pthread_create (&thread[i], NULL, AtenderCliente,&UsuariosConectados.usuario[i].socket);
+		UsuariosConectados.num=UsuariosConectados.num+1;
 		i=i+1;
 		
 	

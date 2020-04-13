@@ -116,3 +116,19 @@ C:\Users\Usuario\Desktop\SO\Semana 4\Conversor\Ejercicio\cliente\WindowsFormsApp
 C:\Users\Usuario\Desktop\SO\Semana 4\Conversor\Ejercicio\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\SO\Semana 4\EjercicioGuia\ampliacion_13\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\Usuario\Desktop\SO\Semana 4\EjercicioGuia\ampliacion_13\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Usuario\Desktop\SO\Semana5\EjercicioGuiaConcurrente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Usuario\Desktop\SO\Semana5\EjercicioGuiaConcurrente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Usuario\Desktop\SO\Semana5\EjercicioGuiaConcurrente\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Usuario\Desktop\SO\Semana5\EjercicioGuiaConcurrente\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Usuario\Desktop\SO\Semana5\EjercicioGuiaConcurrente\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\SO\Semana5\EjercicioGuiaConcurrente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Usuario\Desktop\SO\Semana5\EjercicioGuiaConcurrente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Usuario\Desktop\SO\Semana5\EjercicioGuiaConcurrente\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\SO\Semana 6\EjercicioGuiaL3\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Usuario\Desktop\SO\Semana 6\EjercicioGuiaL3\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Usuario\Desktop\SO\Semana 6\EjercicioGuiaL3\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Usuario\Desktop\SO\Semana 6\EjercicioGuiaL3\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Usuario\Desktop\SO\Semana 6\EjercicioGuiaL3\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\SO\Semana 6\EjercicioGuiaL3\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Usuario\Desktop\SO\Semana 6\EjercicioGuiaL3\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Usuario\Desktop\SO\Semana 6\EjercicioGuiaL3\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
